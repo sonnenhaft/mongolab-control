@@ -1,0 +1,32 @@
+<div class="container">
+    <div>
+        <div><b>DB: </b> {{mongolabConfigs.dataBase}}</div>
+        <div><b>Collection: </b> {{mongolabConfigs.collection}}</div>
+        <div><b>Items in collection: </b> {{testCollection.length}}</div>
+    </div>
+
+    <div class="form-inline" ng-repeat="item in testCollection" style="margin-bottom: 3px">
+        <button class="btn btn-danger" ng-click="remove(item)">
+            <span class="glyphicon glyphicon-remove"></span>
+        </button>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="item.name" ng-change="update(item)" ng-model-options="{debounce: 300}"/>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" ng-model="item.value" ng-change="update(item)" ng-model-options="{debounce: 300}"/>
+        </div>
+        {{item}}
+    </div>
+
+    <form class="form-inline">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" ng-model="nameToAdd" class="form-control"/>
+        </div>
+        <div class="form-group">
+            <label>Value</label>
+            <input type="text" ng-model="valueToAdd" class="form-control"/>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="add()">Add</button>
+    </form>
+</div>

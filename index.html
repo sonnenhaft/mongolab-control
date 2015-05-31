@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Mongo lab rest usage example on AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-resource.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+    <script src="mongolab-factory.js"></script>
+    <script src="mongolab-control.js"></script>
+    <script type="text/javascript">
+        angular.module('mongolab-sample', [
+            'mongolab-factory',
+            'mongolab-control'
+        ]).config(function (mongolabFactoryProvider) {
+            mongolabFactoryProvider.setConfigs({
+                dataBase: 'sonnenhaft2',
+                apiKey: 'PGjxbP3NQzS2xXIe8PgSbJBxVzaPlXGe'
+            });
+        });
+    </script>
+</head>
+<body ng-app="mongolab-sample">
+    <mongolab-control></mongolab-control>
+</body>
+</html>
