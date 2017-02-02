@@ -6,3 +6,7 @@
 * Go to https://mongolab.com/home?newDatabase=1 and create new database.
 * Find api key.
 * Fork this project and refresh db name and api key in configs.
+
+
+# demo
+ http://sonnenhaft.github.io/mongolab-control/
